@@ -20,21 +20,17 @@ connection.connect(function(err) {
     });
 });
 
-function idSearch() {
+function buyProduct() {
     inquirer 
-        .prompt({
+        .prompt([{
             name: "item_id",
             type: "input",
             message: "What is the ID of the product you would like to buy?"
-        })
-        .then(function(answer) {
-            var query = "SELECT product_name, department_name, price, stock_quantity FROM bamazon WHERE ?";
-            connection.query(query, { item_id: answer.item_id }, function(err, res) {
-                if (err) throw err;
-                for (var i = 0; i <res.length; i++) {
-                    console.log("Product Name: " + res[i].product_name + " || Department Name: " + res[i].department_name + " || Price: " + res[i].price + " || Stock Quantity: " + res[i].stock_quantity);
-                }
-                idSearch();
-            });
-        });
+        },
+        {
+            name: "quantity",
+            type: "input",
+            message: "What is the quantity that you would like to buy?"
+        }
+    ])  
 }
