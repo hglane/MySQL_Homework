@@ -52,6 +52,7 @@ function promptCustomerForItem(inventory) {
             }
             else {
                 console.log("\nThat item is not in the inventory.");
+                console.log("\n-----------------------------------------------");
                 loadProducts();
             }
         });
@@ -75,6 +76,7 @@ function promptCustomerForQuantity(product) {
 
             if (quantity > product.stock_quantity) {
                 console.log("\nInsufficient quantity!");
+                console.log("\n-----------------------------------------------");
                 loadProducts();
             }
             else {
@@ -89,6 +91,7 @@ function makePurchase(product, quantity) {
         [quantity, product.item_id],
         function (err, res) {
             console.log("\nSuccesfully purchased " + quantity + " " + product.product_name + "'s!");
+            console.log("\n-----------------------------------------------");
             loadProducts();
         }
     );
@@ -106,6 +109,7 @@ function checkInventory(choiceId, inventory) {
 function checkIfShouldExit(choice) {
     if (choice.toLowerCase() === "q") {
         console.log("Seeya next time!");
+        console.log("\n-----------------------------------------------");
         process.exit(0);
     }
 }
