@@ -11,6 +11,6 @@ This appliation is designed to replicate a user experience similar to Amazon.com
 - MySQL 
 - Node.js
 
-##Check out the GIF below to see a demonstration! 
+## Check out the GIF below to see a demonstration! 
 
 ![Bamazon Demo](https://github.com/hglane/MySQL_Homework/blob/master/demo/BamazonDemo.gif)
