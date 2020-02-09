@@ -1,1 +1,1 @@
-![Bamazon Demo] (demo/BamazonDemo.gif)
+![Bamazon Demo] (/demo/BamazonDemo.gif)
